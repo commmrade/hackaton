@@ -1,0 +1,133 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Iter', sans-serif;
+}
+
+body {
+    background-image: url("../images/Polygon Luminary (1).svg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+
+     user-select: none;
+}
+
+main {
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.title-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.title {
+    font-weight: 700;
+    font-size: 8vw;
+    color: #FFFFFF;
+}
+
+.form-container {
+    width: 100%;
+    max-width: 450px;
+    height: 100%;
+    max-height: 950px;
+    background-color: #FFFFFF;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.form {
+    width: 100%;
+}
+
+.form h2 {
+    font-weight: 400;
+    font-size: 2em;
+    color: #000000;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.form label {
+    font-weight: 400;
+    font-size: 1em;
+    color: #000000;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.form input {
+    outline: none;
+    padding: 15px;
+    width: 100%;
+    border: 2px solid #8294B6;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.form .btn {
+    border: none;
+    background-color: #6488CD;
+    border-radius: 5px;
+    text-align: center;
+    width: 100%;
+    padding: 15px;
+    color: #FFFFFF;
+    font-weight: 400;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+.form a {
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 0.9em;
+    color: #A7A7A7;
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+    .title {
+        font-size: 7vw;
+    }
+
+    .form-container {
+        padding: 20px;
+    }
+
+    .form input, .form .btn {
+        font-size: 1em;
+    }
+
+    main {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 480px) {
+    .title {
+        font-size: 8vw;
+    }
+
+    .form h2 {
+        font-size: 1.5em;
+    }
+
+    main {
+        flex-direction: column;
+    }
+}
+

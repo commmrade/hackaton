@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Поиск событий</title>
+    <link rel="stylesheet" href="/css/filter.css">
+</head>
+<body>
+    <div class="header">
+        <div class="but1-cont"><a href="/web/search" class="but">🔍 Поиск</a></div>
+        <div class="sigma"><a href="/web/mainpage" class="nazvanie">SIGMA</a></div>
+        <div class="but2-cont"><a href="/web/profile" class="but">👤 Профиль</a></div>
+    </div>
+    <div class="main-container">
+        <div class="left">
+            <button onclick="closeEvents()" class="form-but">Ближайшие мероприятия</button>
+            <button onclick="weekEvents()" class="form-but">Мероприятия текущей недели</button>
+            <button onclick="monthEvents()" class="form-but">Мероприятия следующего месяца</button>
+            <button onclick="quarterEvents()" class="form-but">Мероприятия квартала</button>
+            <button onclick="halfEvents()" class="form-but">Мероприятия полугодия</button>
+        </div>
+
+        <div class="center">
+            <h1 class="events">Список событий</h1>
+            <ul>
+                <div  class="card" th:each="event : ${events}" th:attr="data-eventid=${event.id}" onclick="subscribeUser(this)">
+                    <h1 class="card-title" th:text="${event.categoryName}"></h1>
+                    <p class="card-subtitle" th:text="${event.type}"></p>
+                    <p id="event-id" class="event-identificator" th:text="${event.id}"></p>
+                    <div>
+                        <div class="card-participants" th:text="${event.participants}"></div>
+                        <div class="card-participants-label">участ-ов</div>
+                    </div>
+                    <div class="card-info">
+                        <span th:text="${event.sexAndAge}"></span>
+                        <span th:text="${event.country} + ', ' + ${event.region}"></span>
+                        <br>
+                        <p>(Нажмите, чтобы добавить в избранное)</p>
+                    </div>
+                    <div class="card-dates" th:text="${#dates.format(event.startDate, 'yyyy-MM-dd')} + ' - ' + ${#dates.format(event.endDate, 'yyyy-MM-dd')}"></div>
+                </div>
+        
+        
+            </ul>
+        </div>
+
+    </div>
+    <script src="/js/filter.js"></script>
+</body>
+</html>

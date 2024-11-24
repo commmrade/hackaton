@@ -1,0 +1,230 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-image: url("../images/Shiny\ Overlay.svg");
+    background-size: cover; 
+    background-position: center;
+    background-repeat: repeat;
+    height: 100vh;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #314468;
+    padding: 10px 20px;
+    color: white;
+}
+
+.nazvanie {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.but {
+    background-color: #314468;
+    color: white;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.main-container {
+    display: flex;
+
+    padding: 20px;
+    gap: 30%;
+}
+
+.card {
+    transition: 0.3s;
+
+    background: linear-gradient(to right, #132952, #56678a);
+    color: white;
+    border-radius: 8px;
+    
+    width: 75%;
+    
+    padding: 15px;
+    margin-left: 13%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.card:hover {
+    transition: 0.3s;
+    width: 80%;
+    padding: 10px;
+    margin-left: 10%;
+}
+
+ul .card {
+    margin-bottom: 5%;
+}
+.card-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.card-subtitle {
+    font-size: 14px;
+    margin: 5px 0;
+    text-transform: uppercase;
+}
+
+.card-participants {
+    font-size: 32px;
+    font-weight: bold;
+    text-align: right;
+}
+
+.card-participants-label {
+    font-size: 12px;
+    text-align: right;
+}
+
+.card-dates {
+    font-size: 14px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.card-info {
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.card-info span {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.card-list {
+    list-style: none;
+    padding: 0;
+}
+
+
+
+.left {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 200px;
+    width: 100%;
+}
+
+.form-but {
+    transition: 0.2s;
+    padding: 10px;
+    /* background-color: #5c6e90; */
+    background-image: url("../images/Hexagon.svg");
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 14px;
+    text-align: center;
+    height: 60px;
+    max-width: 250px;
+    width: 100%;
+
+}
+.form-but:hover {
+    transition: 0.2s;
+    height: 80px;
+    max-width: 265px;
+}
+
+.center {
+    /* flex-grow: 1; */
+    user-select: none;
+    max-width: 600px;
+    background-color: rgb(178, 188, 199);
+    border-radius: 30px;
+    
+    width: 30%;
+}
+
+.events {
+    font-family: 'Iter', sans-serif;
+    font-weight: 300;
+    font-size: 39px;
+    text-align: center;
+    line-height: 58.09px;
+    margin-bottom: 20px;
+    color: #000000;
+}
+
+.event-list, .recommendations-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.event-card, .recommendation-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-radius: 8px;
+    background: linear-gradient(90deg, #3a3d99, #2f8bc6);
+    color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.event-info {
+    flex-grow: 1;
+}
+
+.event-title {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.event-discipline, .label, .date {
+    font-size: 14px;
+    color: #d1e9ff;
+}
+
+.event-stats {
+    display: flex;
+    gap: 10px;
+}
+
+.participants, .event-time {
+    text-align: center;
+}
+
+.count {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+
+
+@media (max-width: 768px) {
+    .main-container {
+        flex-direction: column;
+    }
+
+    .left {
+        max-width: 100%;
+        align-items: center;
+    }
+
+    .right {
+        max-width: 100%;
+    }
+}
+

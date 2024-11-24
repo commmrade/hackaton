@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Профиль</title>
+    <link rel="stylesheet" href="/css/profile.css">
+</head>
+<body>
+    <div class="header">
+        <a href="/web/mainpage" class="but">Вернуться на главную <br> страницу</a>
+        <button onclick="logout()" class="but">Выйти</button>
+    </div>
+    <div class="container">
+        <h1 class="profile-title">Профиль</h1>
+        <div class="profile-window">
+            <form id="form">
+                <h3 class="replace-email">Изменить данные</h3>  
+                <div class="form-row">
+                   
+                    <div class="input">
+                        <label for="new-email">Новая электронная почта (пусто, если не хотите изменять)</label>
+                        <input type="email" id="new-email" placeholder="Введите новую почту">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="input">
+                        <label for="current-password">Текущий пароль</label>
+                        <input minlength="4" type="password" id="current-password" placeholder="Введите текущий пароль">
+                    </div>
+                    <div class="input">
+                        <label for="new-password">Новый пароль</label>
+                        <input minlength="4" type="password" id="new-password" placeholder="Введите новый пароль">
+                    </div>
+                </div>
+                <button type="submit" class="btn">Сохранить</button>
+            </form>
+        </div>
+    </div>
+</body>
+<script src="/js/profile.js"></script>
+</html>

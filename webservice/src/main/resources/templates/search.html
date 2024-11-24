@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Поиск</title>
+    <link rel="stylesheet" href="/css/search.css">
+</head>
+<body>
+    <div class="header">
+        <a href="/web/mainpage" class="but">Вернуться на главную <br> страницу</a>
+        <div class="but2-cont"><a href="/web/profile" class="but">👤 Профиль</a></div>
+    </div>
+    <div class="main">
+        <div class="container">
+            <div class="search-window">
+                <form id="search-form">
+                    <div class="form-row">
+                        <div class="input">
+                            <label for="location">Страна проведения</label>
+                            <input type="text" id="location" placeholder="Введите место">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="input">
+                                <label for="location">Регион проведения</label>
+                            <input type="text" id="region" placeholder="Введите место">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="input">
+                            <label for="sport-type">Вид спорта</label>
+                            <input type="text" id="sport-type" placeholder="Введите вид спорта">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="input">
+                            <label for="date-from">Дата с</label>
+                            <input type="date" id="date-from">
+                        </div>
+                        <div class="input">
+                            <label for="date-to">Дата по</label>
+                            <input type="date" id="date-to">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                       
+                        <div class="input">
+                            <label for="age-group">Возраст и категория</label>
+                            <input type="text"  id="age-group" placeholder="Введите возрастную группу">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="input">
+                            <label for="competition-type">Тип соревнования</label>
+                            <input type="text"  id="competition-type" placeholder="Введите тип соревнования">
+                        </div>
+                    </div>
+                    <button type="submit" class="btn">Найти</button>
+                </form>
+            </div>
+        </div>
+        <div class="search-container">
+
+            <ul>
+
+            </ul>
+        </div>
+    </div>
+</body>
+<script src="/js/search.js"></script>
+</html>
